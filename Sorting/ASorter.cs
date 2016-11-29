@@ -34,6 +34,38 @@ namespace Sorting
             array[second] = temp;
         }
 
+        public int Length
+        {
+            get { return array.Length; }
+        }
 
+        //Set up a property that will allow the use of [] brackets on this class
+        public T this[int index]
+        {
+            get
+            {
+                return array[index];
+            }
+            set
+            {
+                array[index] = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder("[");
+            foreach(T tVal in array)
+            {
+                sb.Append(tVal);
+                sb.Append(", ");
+            }
+            if(sb.Length > 1)
+            {
+                sb.Remove(sb.Length - 2, 2);
+            }
+            sb.Append("]");
+            return sb.ToString();
+        }
     }
 }
