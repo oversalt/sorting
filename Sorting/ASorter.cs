@@ -29,7 +29,11 @@ namespace Sorting
         /// <param name="second">Location/index of the second item to swap</param>
         protected void Swap(int first, int second)
         {
-
+            T temp = array[first];
+            array[first] = array[second];
+            array[second] = temp;
         }
+
+
     }
 }
