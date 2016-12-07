@@ -43,7 +43,7 @@ namespace Sorting
                 //Do this to create an already sorted array
                 //array[i] = i;
             }
-            TestSorter(new InsertionSorter<int>(array));
+            TestSorter(new HeapSorter<int>(array));
         }
 
         static void Main(string[] args)
